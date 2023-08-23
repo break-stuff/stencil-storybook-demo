@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    /**
+     * This is a demo component to demonstrate the usage of StencilJS with Storybook.
+     * @csspart greeting - Part for styling the greeting
+     * @cssprop [--greeting-color=black] - Color of the greeting
+     * @event my-event - This is a custom event
+     */
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +28,12 @@ export namespace Components {
     }
 }
 declare global {
+    /**
+     * This is a demo component to demonstrate the usage of StencilJS with Storybook.
+     * @csspart greeting - Part for styling the greeting
+     * @cssprop [--greeting-color=black] - Color of the greeting
+     * @event my-event - This is a custom event
+     */
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -33,6 +45,12 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    /**
+     * This is a demo component to demonstrate the usage of StencilJS with Storybook.
+     * @csspart greeting - Part for styling the greeting
+     * @cssprop [--greeting-color=black] - Color of the greeting
+     * @event my-event - This is a custom event
+     */
     interface MyComponent {
         /**
           * The first name
@@ -55,6 +73,12 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            /**
+             * This is a demo component to demonstrate the usage of StencilJS with Storybook.
+             * @csspart greeting - Part for styling the greeting
+             * @cssprop [--greeting-color=black] - Color of the greeting
+             * @event my-event - This is a custom event
+             */
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

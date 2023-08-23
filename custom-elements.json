@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/my-component/my-component.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "This is a demo component to demonstrate the usage of StencilJS with Storybook.",
+          "name": "MyComponent",
+          "cssProperties": [
+            {
+              "description": "Color of the greeting",
+              "name": "--greeting-color",
+              "default": "black"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "Part for styling the greeting",
+              "name": "greeting"
+            }
+          ],
+          "slots": [
+            {
+              "description": "This the default slot",
+              "name": ""
+            },
+            {
+              "description": "This is a named slot",
+              "name": "greeting"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "first",
+              "type": {
+                "text": "string"
+              },
+              "description": "The first name"
+            },
+            {
+              "kind": "field",
+              "name": "middle",
+              "type": {
+                "text": "string"
+              },
+              "description": "The middle name"
+            },
+            {
+              "kind": "field",
+              "name": "last",
+              "type": {
+                "text": "string"
+              },
+              "description": "The last name"
+            },
+            {
+              "kind": "field",
+              "name": "greeting",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"Hello, World! I'm\""
+            },
+            {
+              "kind": "method",
+              "name": "getText",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "events": [
+            {
+              "description": "This is a custom event",
+              "name": "my-event"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "first",
+              "fieldName": "first",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "middle",
+              "fieldName": "middle",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "last",
+              "fieldName": "last",
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "tagName": "my-component",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyComponent",
+          "declaration": {
+            "name": "MyComponent",
+            "module": "src/components/my-component/my-component.tsx"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "my-component",
+          "declaration": {
+            "name": "MyComponent",
+            "module": "src/components/my-component/my-component.tsx"
+          }
+        }
+      ]
+    }
+  ]
+}

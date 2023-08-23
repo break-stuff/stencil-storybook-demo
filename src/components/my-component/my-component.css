@@ -1,3 +1,6 @@
 :host {
+  --greeting-color: black;
+
   display: block;
+  color: var(--greeting-color);
 }
